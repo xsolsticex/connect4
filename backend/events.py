@@ -2,8 +2,8 @@ import asyncio
 import time
 from flask import request
 from flask_socketio import emit, join_room
-from app import socket
-from gestor_partidas import GestorPartidas
+from backend.app import socket
+from backend.gestor_partidas import GestorPartidas
 
 partidas_manager = GestorPartidas()
 
