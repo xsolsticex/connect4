@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+
+body{
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+    display: grid;
+    position: relative;
+    width: 93%;
+    height: 50%;
+    grid-template-columns: repeat(7,80px);
+    grid-template-rows: repeat(6, 80px);
+    gap: 5px;
+    padding: 20px;
+    background: linear-gradient(148deg, #007bff, #0056b3);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+
+}
+
+.cell{
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: white;
+}
+
+.marco{
+    border: 2px solid black;
+    padding: 20px;
+    background-color:#61b3f7;
+    border-radius: 20px;
+}
+
+
+.floating-disc{
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    
+    pointer-events: none;
+    top: 120px;
+    transition: transform 0.1s ease;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+
+
+}
+
+.disc-content{
+    width: 80%;
+    height: 80%;
+ 
+    border-radius: 50%;
+    z-index: 0;
+
+}
+
+.red{
+    background-color: rgb(141, 22, 22);
+}
+
+
+
+.red-content{
+    background-color: rgb(196, 17, 17);
+}
+
+.yellow{
+    background-color: rgb(177, 180, 1);
+}
+
+.yellow-content{
+    background-color: rgb(232, 248, 1);
+}
+
+.disc {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.modal{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgba(43, 43, 43, 0.397); */
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: 0;
+    opacity: 0;
+    transition: opacity 0.8s linear,visibility 0.8s linear;
+
+}
+
+.modal.show{
+    visibility: 1;
+    opacity: 1;
+}
+
+#turno{
+    display: flex;
+    position: absolute;
+    width: 35vw;
+    justify-content: center;
+    bottom: 175px;
+    font-family: "Boldonse", system-ui;
+    font-size: 10px;
+    color: white;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+.guias{
+    display: flex;
+    position: absolute;
+    top: 195px;
+    width: 32vw;
+    justify-content: space-around;
+    font-family: "Boldonse", system-ui;
+    color: white;
+    z-index: -1;
+    background-color: #000000;
+    padding: 18px;
+    border-radius: 20px 
+
+}
+
+.message{
+    width: 40vw;
+    height: 21vh;
+    border: 2px solid black;
+    background-color: #000000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
