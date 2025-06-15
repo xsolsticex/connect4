@@ -2,7 +2,7 @@ import os
 from flask import Flask
 from flask_socketio import SocketIO
 
-from data.constants import socket_secret,gevent_support_enabled
+from data.environ_variable import socket_secret,gevent_support_enabled
 
 os.environ["GEVENT_SUPPORT"] = gevent_support_enabled
 
