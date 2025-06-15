@@ -11,8 +11,8 @@ app.config["SECRET_KEY"] = socket_secret
 
 socket = SocketIO(app, cors_allowed_origins="*", async_mode="gevent")
 
-from routes import *
-from events import *
+from backend.routes import *
+from backend.events import *
 
 # if __name__ == "__main__":
 #     from pyfiglet import Figlet
