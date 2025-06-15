@@ -15,7 +15,7 @@ from backend.routes import *
 from backend.events import *
 
 # if __name__ == "__main__":
-#     from pyfiglet import Figlet
-#     title = Figlet(font="slant")
-#     print(title.renderText("server"))
-#     socket.run(app, host="0.0.0.0", port=8000, debug=True)
+from pyfiglet import Figlet
+title = Figlet(font="slant")
+print(title.renderText("server"))
+socket.run(app, host="0.0.0.0",debug=False)
