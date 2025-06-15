@@ -14,9 +14,9 @@ socket = SocketIO(app, cors_allowed_origins="*", async_mode="gevent")
 from backend.routes import *
 from backend.events import *
 
-# if __name__ == "__main__":
-from pyfiglet import Figlet
-title = Figlet(font="slant")
-print(title.renderText("server"))
-port = int(os.environ.get("PORT", 5000))
-socket.run(app, host="0.0.0.0",debug=False)
+# # if __name__ == "__main__":
+# from pyfiglet import Figlet
+# title = Figlet(font="slant")
+# print(title.renderText("server"))
+# port = int(os.environ.get("PORT", 5000))
+# socket.run(app, host="0.0.0.0",port=port,debug=False)
